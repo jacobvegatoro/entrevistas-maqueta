@@ -1,0 +1,7 @@
+body{
+    margin: 0 auto;
+    background-image: url(../ima/fondo-web.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}

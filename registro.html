@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Plataforma de administración de entrevistas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header class="container bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="inicio.html">Sales Action</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicio.html">Inicio <span class="sr-only">(actual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listado.html">Listado</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registro</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="registro.html">Único</a>
+                            <a class="dropdown-item" href="masivo.html">Masivo</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actualización</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="actestado.html">Estado</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mantenedores</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="listadoclientes.html">Clientes</a>
+                            <a class="dropdown-item" href="listadoreclutadores.html">Reclutadores</a>
+                            <a class="dropdown-item" href="listadoinstalaciones.html">Instalaciones</a>
+                            <a class="dropdown-item" href="listadocargos.html">Cargos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container bg-white px-4 pb-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">Registro de entrevistas</h1>
+                    <p class="lead">Ingreso de los datos básicos de una entrevista al sistema</p>
+                    <hr class="my-2">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <form>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="txtFechaIngreso">Fecha de ingreso (*)</label>
+                            <input type="date" class="form-control" id="txtFechaIngreso" aria-describedby="txtFechaIngresoAyuda">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="txtRun">RUN (*)</label>
+                            <input type="text" class="form-control" id="txtRun" aria-describedby="txtRunAyuda">
+                            <small id="txtRunAyuda" class="form-text text-muted">Ingresa el RUN sin puntos y con guion.</small>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="slcCliente">Cliente</label>
+                            <select name="slcCliente" id="slcCliente" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Sodimac</option>
+                                <option value="2">Cecinas Llanquihue</option>
+                                <option value="3">Asepco</option>
+                                <option value="4">Recsa</option>
+                                <option value="5">Hogar de Cristo</option>
+                            </select>
+                        </div>      
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="txtNombres">Nombres (*)</label>
+                            <input type="text" class="form-control" id="txtNombres">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="txtApellidoPaterno">Apellido Paterno (*)</label>
+                            <input type="text" class="form-control" id="txtApellidoPaterno">
+                        </div>    
+                        <div class="form-group col-md-4">
+                            <label for="txtApellidoMaterno">Apellido Materno (*)</label>
+                            <input type="text" class="form-control" id="txtApellidoMaterno">
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="txtEmail">Correo electrónico (*)</label>
+                            <input type="text" class="form-control" id="txtEmail">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="txtTelefono">Teléfono</label>
+                            <input type="text" class="form-control" id="txtTelefono">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="slcRegion">Región</label>
+                            <select name="slcRegion" id="slcRegion" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Arica y Parinacota</option>
+                                <option value="2">Tarapacá</option>
+                                <option value="3">Antofagasta</option>
+                                <option value="4">Atacama</option>
+                                <option value="5">Coquimbo</option>
+                                <option value="6">Valparaíso</option>
+                                <option value="7">Metropolitana de Santiago</option>
+                                <option value="8">Libertador General Bernardo O’Higgins</option>
+                                <option value="9">Maule</option>
+                                <option value="10">Ñuble</option>
+                                <option value="11">Biobío</option>
+                                <option value="12">La Araucanía</option>
+                                <option value="13">Los Ríos</option>
+                                <option value="14">Los Lagos</option>
+                                <option value="15">Aysén del General Carlos Ibáñez del Campo</option>
+                                <option value="16">Magallanes y la Antártica Chilena</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="slcComuna">Comuna</label>
+                            <select name="slcComuna" id="slcComuna" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Colina</option>
+                                <option value="2">Lampa</option>
+                                <option value="3">Til Til</option>
+                                <option value="4">Pirque</option>
+                                <option value="5">Puente Alto</option>
+                                <option value="6">San José de Maipo</option>
+                                <option value="7">Buin</option>
+                                <option value="8">Calera de Tango</option>
+                                <option value="9">Paine</option>
+                                <option value="10">San Bernardo</option>
+                                <option value="11">Alhué</option>
+                                <option value="12">Curacaví</option>
+                                <option value="13">María Pinto</option>
+                                <option value="14">Melipilla</option>
+                                <option value="15">San Pedro</option>
+                                <option value="16">Cerrillos</option>
+                                <option value="17">Cerro Navia</option>
+                                <option value="18">Conchalí</option>
+                                <option value="19">El Bosque</option>
+                                <option value="20">Estación Central</option>
+                                <option value="21">Huechuraba</option>
+                                <option value="22">Independencia</option>
+                                <option value="23">La Cisterna</option>
+                                <option value="24">La Granja</option>
+                                <option value="25">La Florida</option>
+                                <option value="26">La Pintana</option>
+                                <option value="27">La Reina</option>
+                                <option value="28">Las Condes</option>
+                                <option value="29">Lo Barnechea</option>
+                                <option value="30">Lo Espejo</option>
+                                <option value="31">Lo Prado</option>
+                                <option value="32">Macul</option>
+                                <option value="33">Maipú</option>
+                                <option value="34">Ñuñoa</option>
+                                <option value="35">Pedro Aguirre Cerda</option>
+                                <option value="36">Peñalolén</option>
+                                <option value="37">Providencia</option>
+                                <option value="38">Pudahuel</option>
+                                <option value="39">Quilicura</option>
+                                <option value="40">Quinta Normal</option>
+                                <option value="41">Recoleta</option>
+                                <option value="42">Renca</option>
+                                <option value="43">San Miguel</option>
+                                <option value="44">San Joaquín</option>
+                                <option value="45">San Ramón</option>
+                                <option value="46">Santiago</option>
+                                <option value="47">Vitacura</option>
+                                <option value="48">El Monte</option>
+                                <option value="49">Isla de Maipo</option>
+                                <option value="50">Padre Hurtado</option>
+                                <option value="51">Peñaflor</option>
+                                <option value="52">Talagante</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="slcCanal">Canal</label>
+                            <select name="slcCanal" id="slcCanal" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Facebook</option>
+                                <option value="2">Yapo</option>
+                                <option value="3">Indeed</option>
+                                <option value="4">Computrabajo</option>
+                                <option value="5">Trabajando.com</option>
+                                <option value="6">LinkedIn</option>
+                                <option value="7">Terreno</option>
+                                <option value="8">Omil</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="slcCargo">Cargo</label>
+                            <select name="slcCargo" id="slcCargo" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Operativo de bodega día</option>
+                                <option value="2">Operativo de bodega noche</option>
+                                <option value="3">Operativo de grua reach día</option>
+                                <option value="4">Operativo de grua reach noche</option>
+                                <option value="5">Operativo de grua horquilla día</option>
+                                <option value="6">Operativo de grua horquilla noche</option>
+                                <option value="7">Operativo de producción lavandería</option>
+                                <option value="8">Operativo part-time lavandería</option>
+                                <option value="9">Operativo de producción Llanquihue</option>
+                                <option value="10">Operativo de higiene Llanquihue</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="txtObservaciones">Observación registro</label>
+                            <textarea name="txtObservaciones" id="txtObservaciones" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label>Los campos marcados con (*) son obligatorios</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                  </form>
+
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid text-center p-3 bg-dark text-light">
+        &copy; 2021 - Sistema creado para Sales Action 
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

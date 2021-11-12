@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Plataforma de administración de entrevistas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header class="container bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="inicio.html">Sales Action</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicio.html">Inicio <span class="sr-only">(actual)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="listado.html">Listado</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registro</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="registro.html">Único</a>
+                            <a class="dropdown-item" href="masivo.html">Masivo</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actualización</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="actestado.html">Estado</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mantenedores</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="listadoclientes.html">Clientes</a>
+                            <a class="dropdown-item" href="listadoreclutadores.html">Reclutadores</a>
+                            <a class="dropdown-item" href="listadoinstalaciones.html">Instalaciones</a>
+                            <a class="dropdown-item" href="listadocargos.html">Cargos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container bg-white px-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">Búsqueda de entrevista</h1>
+                    <p class="lead">Listado de entrevistas realizadas y motor de búsqueda</p>
+                    <hr class="my-0">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="#">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <h3>Formulario de búsqueda</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="txtEmpresa">Empresa</label>
+                            <input type="text" class="form-control" id="txtEmpresa">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="slcReclutador">Reclutador</label>
+                            <select name="slcReclutador" id="slcReclutador" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Juan Carlos</option>
+                                <option value="2">Romina</option>
+                                <option value="3">Judith</option>
+                                <option value="4">Leizmar</option>
+                                <option value="5">Álvaro</option>
+                                <option value="6">David</option>
+                                <option value="7">Emiliano</option>
+                                <option value="8">Jesús</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="txtFechaMin">Fecha mínima ingreso</label>
+                            <input type="date" name="txtFechaMin" class="form-control" id="txtFechaMin">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="txtFechaMax">Fecha máxima ingreso</label>
+                            <input type="date" name="txtFechaMax" id="txtFechaMax" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="slcEstado">Estado</label>
+                            <select name="slcEstado" id="slcEstado" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Contactado</option>
+                                <option value="2">Contactar después</option>
+                                <option value="3">Validado</option>
+                                <option value="4">No validado</option>
+                                <option value="5">Ingresa</option>
+                                <option value="6">No se presenta</option>
+                                <option value="7">Entrevista ok</option>
+                                <option value="8">Contratar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="slcCargo">Cargo</label>
+                            <select name="slcCargo" id="slcCargo" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Operativo de bodega día</option>
+                                <option value="2">Operativo de bodega noche</option>
+                                <option value="3">Operativo de grua reach día</option>
+                                <option value="4">Operativo de grua reach noche</option>
+                                <option value="5">Operativo de grua horquilla día</option>
+                                <option value="6">Operativo de grua horquilla noche</option>
+                                <option value="7">Operativo de producción lavandería</option>
+                                <option value="8">Operativo part-time lavandería</option>
+                                <option value="9">Operativo de producción Llanquihue</option>
+                                <option value="10">Operativo de higiene Llanquihue</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="slcCanal">Canal</label>
+                            <select name="slcCanal" id="slcCanal" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Facebook</option>
+                                <option value="2">Yapo</option>
+                                <option value="3">Indeed</option>
+                                <option value="4">Computrabajo</option>
+                                <option value="5">Trabajando.com</option>
+                                <option value="6">LinkedIn</option>
+                                <option value="7">Terreno</option>
+                                <option value="8">Omil</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <hr>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">RUN</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Reclutador</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Victor</td>
+                        <td>Silva Bravo</td>
+                        <td>15.586.526-1</td>
+                        <td>SODIMAC</td>
+                        <td>Judith</td>
+                        <td>
+                            <a href="editar.html"
+							class="btn btn-primary btn-sm">Editar</a> 
+                            <button type="button" class="btn btn-sm btn-danger" 
+                            data-toggle="modal" data-target="#exampleModal">
+                                Eliminar
+                            </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Carolina</td>
+                        <td>Mejías</td>
+                        <td>14.059.169-6</td>
+                        <td>ASEPCO</td>
+                        <td>Juan Carlos</td>
+                        <td>
+                            <a href="editar.html"
+							class="btn btn-primary btn-sm">Editar</a> 
+                            <button type="button" class="btn btn-sm btn-danger" 
+                            data-toggle="modal" data-target="#exampleModal">
+                                Eliminar
+                            </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Luis Alejandro</td>
+                        <td>Becerra Espinoza</td>
+                        <td>16.809.576-7</td>
+                        <td>SODIMAC</td>
+                        <td>Judith</td>
+                        <td>
+                            <a href="editar.html"
+							class="btn btn-primary btn-sm">Editar</a> 
+                            <button type="button" class="btn btn-sm btn-danger" 
+                            data-toggle="modal" data-target="#exampleModal">
+                                Eliminar
+                            </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul class="pagination pagination-md justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" tabindex="-1">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" tabindex="-2">2</a>
+                    </li>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-3">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" tabindex="-4">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" tabindex="-5">5</a>
+                    </li>
+                </ul>
+        
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Eliminar entrevista</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ¿Está seguro que desea eliminar la entrevista?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success">Confirmar</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid text-center p-3 bg-dark text-light">
+        &copy; 2021 - Sistema creado para Sales Action 
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
