@@ -78,10 +78,10 @@
                         <div class="form-group col-md-6">
                             <label for="txtId">Identificador</label>
                             <input type="text" class="form-control" id="txtId">
-                        </div>      
+                        </div>
                         <div class="form-group col-md-6">
-                            <label for="txtFecha">Fecha</label>
-                            <input type="text" class="form-control" id="txtFecha">
+                            <label for="txtFecha">Fecha de ingreso</label>
+                            <input type="date" class="form-control" id="txtFecha">
                         </div>
                     </div>
                     <div class="row">
@@ -152,28 +152,34 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="txtEmpresa">Empresa</label>
+                            <input type="text" class="form-control" id="txtEmpresa">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="txtFechaEstado">Fecha estado</label>
+                            <input type="date" name="txtFechaEstado" id="txtFechaEstado" class="form-control">
+                        </div>
+                        <div class="form-group col-md-4">
                             <label for="slcEstado">Estado</label>
                             <select name="slcEstado" id="slcEstado" class="form-control">
                                 <option value="">Selecciona una opción</option>
                                 <option value="1">Contactado</option>
                                 <option value="2">Contactar después</option>
-                                <option value="3">Validado</option>
-                                <option value="4">No validado</option>
                                 <option value="5">Ingresa</option>
                                 <option value="6">No se presenta</option>
                                 <option value="7">Entrevista ok</option>
                                 <option value="8">Contratar</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="txtFechaEstado">Fecha estado</label>
-                            <input type="date" name="txtFechaEstado" id="txtFechaEstado" class="form-control">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="txtEmpresa">Empresa</label>
-                            <input type="text" class="form-control" id="txtEmpresa">
+                        <div class="form-group col-md-4">
+                            <label for="slcValidado">Validado</label>
+                            <select name="slcValidado" id="slcValidado" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Sí</option>
+                                <option value="2">No</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
@@ -285,7 +291,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="slcPeriodo">Periodo</label>
                             <select name="slcPeriodo" id="slcPeriodo" class="form-control">
                                 <option value="">Selecciona una opción</option>
@@ -294,13 +300,17 @@
                                 <option value="3">7</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="slcTipoServicio">Tipo de servicio</label>
                             <select name="slcTipoServicio" id="slcTipoServicio" class="form-control">
                                 <option value="">Selecciona una opción</option>
                                 <option value="1">Empresa de servicios transitorios</option>
                                 <option value="2">Outsourcing</option>
                             </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="txtFechaContratacion">Fecha de contratación</label>
+                            <input type="date" class="form-control" id="txtFechaContratacion">
                         </div>
                     </div>
                     <div class="row">
@@ -370,7 +380,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="slcSePresenta">Nacionalidad</label>
                             <select name="slcNacionalidad" id="slcNacionalidad" class="form-control">
                                 <option value="">Selecciona una opción</option>
@@ -386,9 +396,13 @@
                                 <option value="10">Venezolana</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="txtFechaNacimiento">Fecha de Nacimiento</label>
                             <input type="date" class="form-control" id="txtFechaNacimiento">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="txtEdad">Edad</label>
+                            <input type="text" class="form-control" id="txtEdad">
                         </div>
                     </div>
                     <div class="row">
@@ -406,7 +420,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="slcPrevision">Previsión</label>
                             <select name="slcPrevision" id="slcPrevision" class="form-control">
                                 <option value="">Selecciona una opción</option>
@@ -421,7 +435,7 @@
                                 <option value="9">Planvital</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="slcSalud">Salud</label>
                             <select name="slcSalud" id="slcSalud" class="form-control">
                                 <option value="">Selecciona una opción</option>
@@ -440,6 +454,14 @@
                                 <option value="13">Nueva Másvida</option>
                                 <option value="14">Isapre Banmédica</option>
                                 <option value="15">Isapre Consalud</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="slcSeguroCovid">Seguro COVID</label>
+                            <select name="slcSeguroCovid" id="slcSeguroCovid" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Sí</option>
+                                <option value="2">No</option>
                             </select>
                         </div>
                     </div>
@@ -528,6 +550,126 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="form-group col-md-12">
+                            <h3>Datos de contacto de emergencia</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="txtNombreEmergencia">Nombre</label>
+                            <input type="text" class="form-control" id="txtNombreEmergencia">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="txtTelefonoEmergencia">Teléfono</label>
+                            <input type="text" class="form-control" id="txtTelefonoEmergencia">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="slcParentezcoEmergencia">Parentezco</label>
+                            <select name="slcParentezcoEmergencia" id="slcParentezcoEmergencia" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Padre / Madre</option>
+                                <option value="2">Cónyuge</option>
+                                <option value="3">Pareja</option>
+                                <option value="4">Hijo / Hija</option>
+                                <option value="5">Familiar</option>
+                                <option value="6">Amigo / amiga</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="txtDireccionEmergencia">Dirección</label>
+                            <input type="text" class="form-control" id="txtDireccionEmergencia">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="slcRegion">Región</label>
+                            <select name="slcRegion" id="slcRegion" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Arica y Parinacota</option>
+                                <option value="2">Tarapacá</option>
+                                <option value="3">Antofagasta</option>
+                                <option value="4">Atacama</option>
+                                <option value="5">Coquimbo</option>
+                                <option value="6">Valparaíso</option>
+                                <option value="7">Metropolitana de Santiago</option>
+                                <option value="8">Libertador General Bernardo O’Higgins</option>
+                                <option value="9">Maule</option>
+                                <option value="10">Ñuble</option>
+                                <option value="11">Biobío</option>
+                                <option value="12">La Araucanía</option>
+                                <option value="13">Los Ríos</option>
+                                <option value="14">Los Lagos</option>
+                                <option value="15">Aysén del General Carlos Ibáñez del Campo</option>
+                                <option value="16">Magallanes y la Antártica Chilena</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="slcComuna">Comuna</label>
+                            <select name="slcComuna" id="slcComuna" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1">Colina</option>
+                                <option value="2">Lampa</option>
+                                <option value="3">Til Til</option>
+                                <option value="4">Pirque</option>
+                                <option value="5">Puente Alto</option>
+                                <option value="6">San José de Maipo</option>
+                                <option value="7">Buin</option>
+                                <option value="8">Calera de Tango</option>
+                                <option value="9">Paine</option>
+                                <option value="10">San Bernardo</option>
+                                <option value="11">Alhué</option>
+                                <option value="12">Curacaví</option>
+                                <option value="13">María Pinto</option>
+                                <option value="14">Melipilla</option>
+                                <option value="15">San Pedro</option>
+                                <option value="16">Cerrillos</option>
+                                <option value="17">Cerro Navia</option>
+                                <option value="18">Conchalí</option>
+                                <option value="19">El Bosque</option>
+                                <option value="20">Estación Central</option>
+                                <option value="21">Huechuraba</option>
+                                <option value="22">Independencia</option>
+                                <option value="23">La Cisterna</option>
+                                <option value="24">La Granja</option>
+                                <option value="25">La Florida</option>
+                                <option value="26">La Pintana</option>
+                                <option value="27">La Reina</option>
+                                <option value="28">Las Condes</option>
+                                <option value="29">Lo Barnechea</option>
+                                <option value="30">Lo Espejo</option>
+                                <option value="31">Lo Prado</option>
+                                <option value="32">Macul</option>
+                                <option value="33">Maipú</option>
+                                <option value="34">Ñuñoa</option>
+                                <option value="35">Pedro Aguirre Cerda</option>
+                                <option value="36">Peñalolén</option>
+                                <option value="37">Providencia</option>
+                                <option value="38">Pudahuel</option>
+                                <option value="39">Quilicura</option>
+                                <option value="40">Quinta Normal</option>
+                                <option value="41">Recoleta</option>
+                                <option value="42">Renca</option>
+                                <option value="43">San Miguel</option>
+                                <option value="44">San Joaquín</option>
+                                <option value="45">San Ramón</option>
+                                <option value="46">Santiago</option>
+                                <option value="47">Vitacura</option>
+                                <option value="48">El Monte</option>
+                                <option value="49">Isla de Maipo</option>
+                                <option value="50">Padre Hurtado</option>
+                                <option value="51">Peñaflor</option>
+                                <option value="52">Talagante</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="form-group col-12">
                             <label>Los campos marcados con (*) son obligatorios</label>
                         </div>
@@ -538,7 +680,6 @@
                         </div>
                     </div>
                   </form>
-
             </div>
         </div>
     </main>
